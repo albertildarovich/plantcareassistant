@@ -1,0 +1,1 @@
+export { weatherTipsModel } from './weatherTipsModel';

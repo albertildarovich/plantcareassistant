@@ -1,4 +1,64 @@
 {
-  "name": "PlantCareAssistant",
-  "displayName": "PlantCareAssistant"
+  "expo": {
+    "name": "PlantCareAssistant",
+    "slug": "PlantCareAssistant",
+    "version": "1.0.0",
+    "orientation": "default",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "backgroundColor": "#4CAF50"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.plantcare.assistant",
+      "infoPlist": {
+        "NSCameraUsageDescription": "We need camera access to identify plants and take growth photos.",
+        "NSPhotoLibraryUsageDescription": "We need photo library access to add plant images."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#4CAF50"
+      },
+      "package": "com.plantcare.assistant",
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "RECEIVE_BOOT_COMPLETED",
+        "VIBRATE",
+        "POST_NOTIFICATIONS"
+      ]
+    },
+    "plugins": [
+      "expo-sqlite",
+      [
+        "expo-notifications",
+        {
+          "projectId": "test-91fdb"
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "cameraPermission": "We need camera access to identify plants and take growth photos.",
+          "photosPermission": "We need photo library access to add plant images."
+        }
+      ]
+    ],
+    "newArchEnabled": true,
+    "extra": {
+      "firebaseApiKey": "$EXPO_PUBLIC_FIREBASE_API_KEY",
+      "firebaseAuthDomain": "$EXPO_PUBLIC_FIREBASE_AUTH_DOMAIN",
+      "firebaseProjectId": "$EXPO_PUBLIC_FIREBASE_PROJECT_ID",
+      "firebaseStorageBucket": "$EXPO_PUBLIC_FIREBASE_STORAGE_BUCKET",
+      "firebaseMessagingSenderId": "$EXPO_PUBLIC_FIREBASE_MESSAGING_SENDER_ID",
+      "firebaseAppId": "$EXPO_PUBLIC_FIREBASE_APP_ID",
+      "firebaseMeasurementId": "$EXPO_PUBLIC_FIREBASE_MEASUREMENT_ID",
+      "useMockAuth": "$EXPO_PUBLIC_USE_MOCK_AUTH",
+      "weatherApiKey": "$EXPO_PUBLIC_WEATHER_API_KEY",
+      "weatherApiBaseUrl": "$EXPO_PUBLIC_WEATHER_API_BASE_URL"
+    }
+  }
 }
